@@ -1,17 +1,10 @@
 .main {
     margin-top: 80px;
     width: 100%;
-  }
-  .map-name {
-    position: relative;
-    left: 4%;
-    width: 80%;
-    margin: 20px;
-  }
-  #map {
-    width: 92%;
-    margin: auto;
-    left: 0;
-    right: 0;
-  }
-  
+}
+.map-name {
+  position: relative;
+  left: 4%;
+  width: 80%;
+  margin: 20px;
+}
