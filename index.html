@@ -34,11 +34,11 @@
     <div class="empty-filler"></div>
     <main class="main">
         <div class="map-name">핫플레이스</div>
-        <div class="map"></div>
+        <div id="map"></div>
     </main>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=37f40d03d1d9126bc29f7a5c66367945"></script>
     <script>
-        var container = document.getElementsByClassName('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
         var options = { //지도를 생성할 때 필요한 기본 옵션
             center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
             level: 3 //지도의 레벨(확대, 축소 정도)
