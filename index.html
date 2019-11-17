@@ -33,6 +33,7 @@
     <main class="main">
       <div class="map-name">Trip Planner</div>
       <div id="map"></div>
+
       <script>
         mapboxgl.accessToken =
           "pk.eyJ1IjoiaHl1bm9vb291IiwiYSI6ImNrMWozcnY2YzF3cXIzY3A2bjUyZ3oyZGsifQ.atI25r1hT051DYm-1pKV1w";
@@ -40,9 +41,33 @@
           container: "map",
           style: "mapbox://styles/hyunoooou/ck1xsb0dm8kuh1cpihsx92tcq",
           center: [127.051954, 37.544775], // 지도 중심 경위도
-          zoom: 13, // 지도 줌 레벨
-          localIdeographFontFamily:
-            "'Noto Sans', 'Noto Sans CJK SC', sans-serif" // 한글
+          zoom: 13 // 지도 줌 레벨
+        });
+        map.on("click", function onClick(event) {
+          var geometry = event.point;
+          var parameters = {
+            layers: ["architecturedb"]
+          };
+          var features = map.queryRenderedFeatures(geometry, parameters);
+          console.log(features);
+          var db__name = features[0].properties.name;
+          var db__facilityType = features[0].properties.facilityType;
+          var db__description = features[0].properties.description;
+          var db__imageURL = features[0].properties.imageURL;
+          console.log(db__name);
+          console.log(db__facilityType);
+          console.log(db__description);
+          console.log(db__imageURL);
+
+          var popup = new mapboxgl.Popup();
+          popup.setLngLat(event.lngLat);
+          popup.setHTML(
+            `<h2 class="db__name">${db__name}</h2>
+      <div class="db__facilityType">${db__facilityType}</div>
+      <div class="db__description">${db__description}</div>
+      <img class="db__imageURL" src="${db__imageURL}" />`
+          );
+          popup.addTo(map);
         });
       </script>
     </main>
