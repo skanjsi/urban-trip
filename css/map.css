@@ -1,3 +1,14 @@
+.db__name {
+  font-size: 13px;
+  font-weight: bold;
+}
+
 .db__imageURL {
-  height: 100px;
+  height: 120px;
+}
+
+.db__btn {
+  background: #ffffff;
+  color: #34495e;
+  border: 1px solid #34495e;
 }

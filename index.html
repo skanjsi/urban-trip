@@ -59,15 +59,16 @@
           console.log(db__description);
           console.log(db__imageURL);
 
-          var popup = new mapboxgl.Popup();
-          popup.setLngLat(event.lngLat);
-          popup.setHTML(
-            `<h2 class="db__name">${db__name}</h2>
-      <div class="db__facilityType">${db__facilityType}</div>
-      <div class="db__description">${db__description}</div>
-      <img class="db__imageURL" src="${db__imageURL}" />`
-          );
-          popup.addTo(map);
+          var popup = new mapboxgl.Popup()
+            .setLngLat(event.lngLat)
+            .setHTML(
+              `<h2 class="db__name">${db__name}</h2>
+        <div class="db__facilityType">${db__facilityType}</div>
+        <div class="db__description">${db__description}</div>
+        <img class="db__imageURL" src="${db__imageURL}" />
+        <button class="db__btn"> + 여행 일정에 추가 </button>`
+            )
+            .addTo(map);
         });
       </script>
     </main>
