@@ -1,0 +1,41 @@
+.header {
+    width: 92%;
+    height: 60px;
+    top: 0px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+  }
+  
+  .empty-filler {
+    width: 92%;
+    height: 2px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: #020202;
+    position: fixed;
+    z-index: 5;
+    top: 70px;
+  }
+  
+  .header__title {
+    margin: 20px;
+    font-size: 30px;
+  }
+  
+  .header__list {
+    margin: 5px;
+    font-size: 9px;
+  }
+
+  .header__search {
+    width: 90px;
+  }

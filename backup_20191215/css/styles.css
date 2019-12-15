@@ -1,0 +1,14 @@
+@import "reset.css";
+@import "header.css";
+@import "main.css";
+@import "map.css";
+@import "mapicon.css";
+
+body {
+  color: #020202;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}

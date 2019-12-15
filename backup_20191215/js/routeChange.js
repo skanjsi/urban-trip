@@ -14,7 +14,7 @@ var speedFactor = 50;
 
 var endPoint = turf.featureCollection([turf.point(endPointLocation)]);
 var selectedPlaces = turf.featureCollection([]);
-var nothing = turf.featureCollection([]); // why 'nothing'?
+var nothing = turf.featureCollection([]);
 
 map.on("load", function() {
   var marker = document.createElement("div");
@@ -214,6 +214,8 @@ map.on("load", function() {
         "&overview=full&steps=true&geometries=geojson&source=first&access_token=" +
         mapboxgl.accessToken
       );
+
+      console.log(accessToken); // 내가 쓴 것, 뭐가 문제?
     }
     function objectToArray(obj) {
       var keys = Object.keys(obj);
