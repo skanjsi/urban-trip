@@ -7,3 +7,14 @@
   background: #3887be;
   pointer-events: none;
 }
+
+.truck {
+  margin: -10px -10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: red;
+  opacity: 0%;
+  pointer-events: none;
+}
