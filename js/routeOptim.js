@@ -13,7 +13,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoidXJiYW5pbiIsImEiOiJjazMya3huZmowMnoyM21waWJiZmJhcXhmIn0.ji6EuAtrz23QDiP-gdw-Yw";
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/urbanin/ck3mp0q6s0r791cqo3v2hx7x5",
+  style: "mapbox://styles/urbanin/ck4bdwns428oj1cpfgc1w54dd",
   center: [127.051954, 37.544775], // 지도 중심 경위도
   zoom: 13 // 지도 줌 레벨
 });
